@@ -7,3 +7,7 @@ files.
 ````shell
 cat file1 >> file2
 ````
+
+## Todo:
+* Add system profiling.
+* Figure out what's the largest chunk of memory read can read without being ineffective.

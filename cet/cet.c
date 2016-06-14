@@ -23,7 +23,12 @@ int main(int argc, char **argv){
 
   fd1 = open(argv[1],O_RDWR);
   fd2 = open(argv[2],O_RDONLY);
-  if(fd1 * fd2 < 0){
+  if(fd1 < 0){
+    puts("An error occured opening one of the files.");
+    clean();
+    return 2;
+  }
+  if(fd2 < 0){
     puts("An error occured opening one of the files.");
     clean();
     return 2;
